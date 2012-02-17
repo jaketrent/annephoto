@@ -1,0 +1,8 @@
+{
+  "name": "annephoto",
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "2.2.0",
+    "request": "2.2.0"
+  }
+}
