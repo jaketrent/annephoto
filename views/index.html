@@ -1,11 +1,29 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Anne Photo</title>
   <link href="/css/styles.css" rel="stylesheet" />
+  <script type="text/javascript" src="/js/vendor/modernizr.custom.js"></script>
+  <script type="text/javascript" src="/js/require-jquery.js" data-main="/js/photo/main"></script>
 </head>
 <body>
+
+  <script type="text/template" id="album-li">
+    <img class="album-link" src="<%- cover %>" />
+  </script>
+
+  <script type="text/template" id="photo-display">
+    <img class="disp-photo" src="<%- url %>" />
+  </script>
+  
   <h1>Anne Photo</h1>
+  <div id="display" role="navigation">
+    <a href="javascript:void(0);" class="arrow left">Back</a>
+    <a href="javascript:void(0);" class="arrow right">Forward</a>
+  </div>
+  <ul id="albums" role="navigation">
+  </ul>
+  <a href="javascript:void(0);" id="albums-tgl">Show albums</a>
 </body>
 </html>
