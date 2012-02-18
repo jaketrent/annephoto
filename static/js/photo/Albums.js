@@ -18,10 +18,14 @@ define(['Album'], function (Album) {
           id: album.gphoto$id.$t,
           cover: album.media$group.media$thumbnail[0].url,
           title: album.title.$t,
-          userId: self.userId
+          userId: self.userId,
+          windowWidthAtAlbumLoad: self.getCurrentWindowWidth()
         });
       });
       return albums;
+    },
+    getCurrentWindowWidth: function () {
+      return $('body').width();
     }
   });
 });
