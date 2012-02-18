@@ -17,6 +17,7 @@ define(['Album'], function (Album) {
         albums.push({
           id: album.gphoto$id.$t,
           cover: album.media$group.media$thumbnail[0].url,
+          title: album.title.$t,
           userId: self.userId
         });
       });

@@ -2,7 +2,7 @@ define(function () {
   return Backbone.View.extend({
     tagName: 'li',
     events: {
-      'click img': 'fetchAlbum'
+      'click a': 'fetchAlbum'
     },
     initialize: function () {
       _.bindAll(this);

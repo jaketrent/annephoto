@@ -4,26 +4,37 @@
   <meta charset="UTF-8" />
   <title>Anne Photo</title>
   <link href="/css/styles.css" rel="stylesheet" />
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <script type="text/javascript" src="/js/vendor/modernizr.custom.js"></script>
   <script type="text/javascript" src="/js/require-jquery.js" data-main="/js/photo/main"></script>
 </head>
 <body>
 
   <script type="text/template" id="album-li">
-    <img class="album-link" src="<%- cover %>" />
+    <a href="#"><%- title %></a>
   </script>
 
   <script type="text/template" id="photo-display">
     <img class="disp-photo" src="<%- url %>" />
   </script>
   
-  <h1>Anne Photo</h1>
+  <h1><img src="/img/logo.png" alt="Anne Trent Photo" role="banner" id="albums-tgl" /></h1>
   <div id="display" role="navigation">
     <a href="javascript:void(0);" class="arrow left">Back</a>
     <a href="javascript:void(0);" class="arrow right">Forward</a>
   </div>
   <ul id="albums" role="navigation">
   </ul>
-  <a href="javascript:void(0);" id="albums-tgl">Show albums</a>
+  <article id="contact">
+    <header>
+      <h1>Anne Trent Photography</h1>
+    </header>
+    <p>This is why I do photography.</p>
+    <p>Here is where I do photography.</p>
+    <a href="tel:555-555-5555">555-555-5555</a>
+    <a href="mailto:anne.trent.photo@gmail.com">anne.trent.photo@gmail.com</a>
+  </article>
 </body>
 </html>

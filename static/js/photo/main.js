@@ -20,7 +20,7 @@ require({
   require(['DisplayView', 'AlbumSliderView', 'AlbumsToggleView'], function (DisplayView, AlbumSliderView, AlbumsToggleView) {
     new DisplayView();
     var albumSliderView = new AlbumSliderView();
-    albumSliderView.fetchForUser('116342059677336243524');
+    albumSliderView.fetchForUser('112752247658360268564');
     new AlbumsToggleView();
   });
 });

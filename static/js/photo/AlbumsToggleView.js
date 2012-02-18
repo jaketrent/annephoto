@@ -7,7 +7,6 @@ define(function () {
     initialize: function () {
       _.bindAll(this);
       Backbone.Events.bind('albumClick', this.showTgl);
-      $(this.el).hide();
     },
     showTgl: function () {
       $(this.el).show();
