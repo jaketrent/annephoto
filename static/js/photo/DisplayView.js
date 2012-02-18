@@ -28,7 +28,9 @@ define(function () {
     showPhoto: function () {
       var $photos = $(this.el).children('.disp-photo');
       $photos.hide();
-      $photos.eq(this.index).show();
+      var $currPhoto = $photos.eq(this.index);
+      $currPhoto.show();
+      this.positionPhoto($currPhoto);
     },
     left: function () {
       this.scrollDisplayViewTop();
@@ -39,6 +41,29 @@ define(function () {
       this.scrollDisplayViewTop();
       this.moveIndex(1);
       this.showPhoto();
+    },
+    positionPhoto: function ($photo) {
+      var $window = $(window);
+      var windowHeight = $window.height();
+      var windowWidth = $window.width();
+      var photoWidth = $photo.data('width');
+      var photoHeight = $photo.data('height');
+      if (photoWidth >= photoHeight) { // or replace with screen ratio comparison
+        $photo.css({
+          left: 'auto',
+          top: photoHeight > windowHeight ? -1 * ((photoHeight - windowHeight) / 2) : (windowHeight - photoHeight) / 2,
+          width: '100%',
+          height: 'auto'
+        });
+      } else {
+        var newWidth = (photoWidth * windowHeight) / photoHeight;
+        $photo.css({
+          left: (windowWidth - newWidth) / 2,
+          top: 0,
+          width: 'auto',
+          height: windowHeight
+        });
+      }
     },
     scrollDisplayViewTop: function () {
       window.scrollTo(0, $(this.el).offset().top);
