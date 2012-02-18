@@ -6,9 +6,13 @@ define(function () {
       'click .arrow.right': 'right'
     },
     initialize: function () {
+      var self = this;
       _.bindAll(this);
       this.$('.arrow').hide();
       Backbone.Events.bind('photosDisplay', this.renderPhotos);
+      $(window).resize(function () {
+        self.positionPhoto($(self.el).children('.disp-photo').eq(self.index));
+      });
     },
     renderPhotos: function (photos) {
       this.photos = photos;
