@@ -52,17 +52,18 @@ define(function () {
       var windowWidth = $window.width();
       var photoWidth = $photo.data('width');
       var photoHeight = $photo.data('height');
+      var newWideHeight = (photoHeight * windowWidth) / photoWidth;
+      var newTallWidth = (photoWidth * windowHeight) / photoHeight;
       if (photoWidth >= photoHeight) { // or replace with screen ratio comparison
         $photo.css({
           left: 'auto',
-          top: photoHeight > windowHeight ? -1 * ((photoHeight - windowHeight) / 2) : (windowHeight - photoHeight) / 2,
+          top: photoHeight > windowHeight ? -1 * ((newWideHeight - windowHeight) / 2) : (windowHeight - newWideHeight) / 2,
           width: '100%',
           height: 'auto'
         });
       } else {
-        var newWidth = (photoWidth * windowHeight) / photoHeight;
         $photo.css({
-          left: (windowWidth - newWidth) / 2,
+          left: (windowWidth - newTallWidth) / 2,
           top: 0,
           width: 'auto',
           height: windowHeight
