@@ -57,13 +57,6 @@ a {
 #contact h1 {
   margin-top: 0;
 }
-#display {/*
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;*/
-}
 .disp-photo {
   position: absolute;
   top: 0;
@@ -73,15 +66,18 @@ a {
 .arrow {
   position: absolute;
   top: 500px;
-  display: block;
-  height: 50px;
-  width: 150px;
-  background: orange;
+  display: none;
+  height: 76px;
+  width: 34px;
+  text-indent: -999em;
+  overflow: hidden;
   z-index: 4;
 }
 .left {
   left: 0;
+  background: url(../img/left.png);
 }
 .right {
   right: 0;
+  background: url(../img/right.png);
 }

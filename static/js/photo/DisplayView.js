@@ -8,7 +8,6 @@ define(function () {
     initialize: function () {
       var self = this;
       _.bindAll(this);
-      this.$('.arrow').hide();
       Backbone.Events.bind('photosDisplay', this.renderPhotos);
       $(window).resize(function () {
         self.positionPhoto($(self.el).children('.disp-photo').eq(self.index));
