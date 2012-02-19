@@ -26,6 +26,13 @@ define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
         frag.appendChild(albumView.render(liTemplate).el);
       });
       $(this.el).children('#albums').html(frag);
+
+      _($(this.el).children('#albums').children('li')).each(function (li, i) {
+        setTimeout(function () {
+          $(li).fadeIn('slow');
+        }, i * 300);
+      });
+
       //$('#albums').find('img').eq(0).click();
     },
     hideAlbums: function () {

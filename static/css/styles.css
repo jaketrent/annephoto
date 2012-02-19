@@ -42,7 +42,7 @@ a {
   list-style-position: inside;
 }
 #albums li {
-  display: block;
+  display: none;
   text-align: right;
   margin: 10px 0;
 }
