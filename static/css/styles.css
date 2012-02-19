@@ -4,7 +4,7 @@ html, body {
 }
 body {
   position: relative;
-  background: #070707;
+  background: #070707 url(../img/bg.png);
   color: #fff;
   overflow: hidden;
   font-family: arial, helveticaneue-light, helvetica, sans-serif;
