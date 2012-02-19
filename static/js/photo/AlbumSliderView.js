@@ -1,9 +1,9 @@
 define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
   return Backbone.View.extend({
-    el: '#albums',
+    el: '#sidebar',
+    
     initialize: function () {
       _.bindAll(this);
-      this.$('#albums-tgl').hide();
       Backbone.Events.bind('albumClick', this.hideAlbums);
       Backbone.Events.bind('albumTglClick', this.showAlbums);
     },
@@ -24,7 +24,7 @@ define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
         });
         frag.appendChild(albumView.render(liTemplate).el);
       });
-      $(this.el).html(frag);
+      $(this.el).children('#albums').html(frag);
       //$('#albums').find('img').eq(0).click();
     },
     hideAlbums: function () {

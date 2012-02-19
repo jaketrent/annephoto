@@ -16,17 +16,15 @@ a {
   color: #fff;
   text-decoration: none;
 }
-#title {
-  position: absolute;
-  top: 10px;
+#sidebar {
+  top: 0;
   left: 0;
   z-index: 5;
 }
+#title {
+  padding: 33px 0 0 50px;
+}
 #albums {
-  position: absolute;
-  top: 320px;
-  left: 0;
-  z-index: 5;
   width: 250px;
   margin: 0;
   padding: 0;
@@ -47,7 +45,7 @@ a {
 }
 #contact {
   position: absolute;
-  top: 10px;
+  top: 33px;
   right: 0;
   z-index: 5;
   background: orange;

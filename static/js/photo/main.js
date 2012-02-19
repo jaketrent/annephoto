@@ -17,10 +17,9 @@ require({
     }
   }
 }, ['require', 'webstack'], function (require) {
-  require(['DisplayView', 'AlbumSliderView', 'AlbumsToggleView'], function (DisplayView, AlbumSliderView, AlbumsToggleView) {
+  require(['DisplayView', 'AlbumSliderView'], function (DisplayView, AlbumSliderView) {
     new DisplayView();
     var albumSliderView = new AlbumSliderView();
     albumSliderView.fetchForUser('112752247658360268564');
-    new AlbumsToggleView();
   });
 });
