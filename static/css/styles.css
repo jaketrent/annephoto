@@ -20,9 +20,19 @@ a {
   top: 0;
   left: 0;
   z-index: 5;
+  width: 341px;
+  position: absolute;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+#sidebar.is-hidden {
+  left: -252px;
 }
 #title {
   padding: 33px 0 0 50px;
+  cursor: pointer;
 }
 #albums {
   width: 250px;
@@ -34,21 +44,35 @@ a {
 #albums li {
   display: block;
   text-align: right;
-  background: orange;
-  width: 250px;
   margin: 10px 0;
 }
 #albums li a {
   display: block;
   padding: 10px 30px;
   width: 190px;
+  background: #666666;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+#albums li a:hover {
+  width: 215px;
+  background: #f7d200; /* Old browsers */
+  background: -moz-linear-gradient(top, #f7d200 0%, #fcb415 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7d200), color-stop(100%,#fcb415)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f7d200 0%,#fcb415 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f7d200 0%,#fcb415 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f7d200 0%,#fcb415 100%); /* IE10+ */
+  background: linear-gradient(top, #f7d200 0%,#fcb415 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7d200', endColorstr='#fcb415',GradientType=0 ); /* IE6-9 */
 }
 #contact {
   position: absolute;
   top: 33px;
   right: 0;
   z-index: 5;
-  background: orange;
+  background: #666666;
   padding: 30px 20px;
   width: 190px;
 }

@@ -1,11 +1,12 @@
 define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
   return Backbone.View.extend({
     el: '#sidebar',
-    
+    events: {
+      'click #albums-tgl': 'toggleSidebar'
+    },
     initialize: function () {
       _.bindAll(this);
-      Backbone.Events.bind('albumClick', this.hideAlbums);
-      Backbone.Events.bind('albumTglClick', this.showAlbums);
+      Backbone.Events.bind('albumClick', this.toggleSidebar);
     },
     fetchForUser: function(userId) {
       this.collection = new Albums();
@@ -38,7 +39,9 @@ define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
         left: 0,
         opacity: 1
       });
+    },
+    toggleSidebar: function () {
+      $(this.el).toggleClass('is-hidden');
     }
-
   });
 });
