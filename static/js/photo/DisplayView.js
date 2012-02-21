@@ -3,7 +3,8 @@ define(function () {
     el: '#display',
     events: {
       'click .arrow.left': 'left',
-      'click .arrow.right': 'right'
+      'click .arrow.right': 'right',
+      'click .disp-photo': 'right'
     },
     initialize: function () {
       var self = this;
