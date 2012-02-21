@@ -77,11 +77,19 @@ a {
   background: rgb(102, 102, 102);
   background: rgba(102, 102, 102, .5);
   padding: 30px 20px;
-  width: 190px;
+  width: 240px;
   border-radius: 25px 0 0 25px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+#contact.is-hidden {
+  right: -280px;
 }
 #contact h1 {
   margin-top: 0;
+  font-size: 20px;
 }
 .disp-photo {
   position: absolute;

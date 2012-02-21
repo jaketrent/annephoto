@@ -49,6 +49,7 @@ define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
     },
     toggleSidebar: function () {
       $(this.el).toggleClass('is-hidden');
+      $('#contact').toggleClass('is-hidden');
     }
   });
 });
