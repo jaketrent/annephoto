@@ -50,11 +50,13 @@ a {
   display: block;
   padding: 10px 30px;
   width: 190px;
-  background: #666666;
+  background: rgb(102, 102, 102);
+  background: rgba(102, 102, 102, .5);
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  border-radius: 0 25px 25px 0;
 }
 #albums li a:hover {
   width: 215px;
@@ -72,9 +74,11 @@ a {
   top: 33px;
   right: 0;
   z-index: 5;
-  background: #666666;
+  background: rgb(102, 102, 102);
+  background: rgba(102, 102, 102, .5);
   padding: 30px 20px;
   width: 190px;
+  border-radius: 25px 0 0 25px;
 }
 #contact h1 {
   margin-top: 0;

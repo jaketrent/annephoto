@@ -9,8 +9,13 @@ define(function () {
       var self = this;
       _.bindAll(this);
       Backbone.Events.bind('photosDisplay', this.renderPhotos);
-      $(window).resize(function () {
-        self.positionPhoto($(self.el).children('.disp-photo').eq(self.index));
+      $(window).resize(this.adjustForViewport);
+    },
+    adjustForViewport: function () {
+      this.positionPhoto($(this.el).children('.disp-photo').eq(this.index));
+      var $arrows = this.$('.arrow');
+      $arrows.css({
+        top: ($(window).height() - $arrows.height()) / 2
       });
     },
     renderPhotos: function (photos) {
