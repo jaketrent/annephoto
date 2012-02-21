@@ -30,6 +30,7 @@ define(function () {
       });
       $(this.el).append(frag);
       $(this.el).find('.disp-photo').hide();
+      this.adjustForViewport();
       this.showPhoto();
       return this;
     },
