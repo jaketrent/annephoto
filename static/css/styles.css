@@ -39,6 +39,17 @@ a {
 #sidebar.is-hidden {
   left: -252px;
 }
+#list {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  height: 50px;
+  width: 50px;
+  background: #f4eb27 url(../img/list.png) no-repeat center;
+  overflow: hidden;
+  text-indent: -999em;
+  display: none;
+}
 #title {
   padding: 33px 0 0 50px;
   cursor: pointer;
@@ -126,8 +137,14 @@ a {
   #sidebar {
     width: 300px;
   }
+  #sidebar.is-hidden #list {
+    display: block;
+  }
   #title {
     padding-top: 0;
+  }
+  #sidebar.is-hidden #title {
+    display: none;
   }
   #albums-tgl {
     width: 250px;

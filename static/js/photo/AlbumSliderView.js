@@ -2,7 +2,8 @@ define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
   return Backbone.View.extend({
     el: '#sidebar',
     events: {
-      'click #albums-tgl': 'toggleSidebar'
+      'click #albums-tgl': 'toggleSidebar',
+      'click #list': 'toggleSidebar'
     },
     initialize: function () {
       _.bindAll(this);
