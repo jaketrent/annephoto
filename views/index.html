@@ -13,23 +13,23 @@
 <body>
 
   <script type="text/template" id="album-li">
-    <a href="#"><%- title %></a>
+    <a href="#" class="trans-fast"><%- title %></a>
   </script>
 
   <script type="text/template" id="photo-display">
     <img class="disp-photo" src="<%- url %>" data-height="<%- height %>" data-width="<%- width %>" />
   </script>
   
-  <div id="display" role="navigation">
-    <a href="javascript:void(0);" class="arrow left">Back</a>
-    <a href="javascript:void(0);" class="arrow right">Forward</a>
+  <div id="display" role="navigation" class="trans-fast is-hidden">
+    <a href="javascript:void(0);" class="trans-fast arrow left">Back</a>
+    <a href="javascript:void(0);" class="trans-fast arrow right">Forward</a>
   </div>
-  <div id="sidebar">
+  <div id="sidebar" class="trans-slow">
     <h1 id="title"><img src="/img/logo.png" alt="Anne Trent Photo" role="banner" id="albums-tgl" /></h1>
     <ul id="albums" role="navigation">
     </ul>
   </div>
-  <article id="contact">
+  <article id="contact" class="trans-slow">
     <header>
       <h1>Anne Trent Photography</h1>
     </header>
@@ -42,6 +42,5 @@
     <img src="/img/leaf.png" />&nbsp;<a href="tel:555-555-5555">555-555-5555</a>
     <a href="mailto:anne.trent.photo@gmail.com">anne.trent.photo@gmail.com</a>
   </article>
-  <div style="clear:both;"></div>
 </body>
 </html>

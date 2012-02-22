@@ -16,16 +16,25 @@ a {
   color: #fff;
   text-decoration: none;
 }
+.trans-fast {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.trans-slow {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
 #sidebar {
   top: 0;
   left: 0;
   z-index: 5;
   width: 341px;
   position: absolute;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
 }
 #sidebar.is-hidden {
   left: -252px;
@@ -52,10 +61,6 @@ a {
   width: 190px;
   background: rgb(102, 102, 102);
   background: rgba(102, 102, 102, .5);
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
   border-radius: 0 25px 25px 0;
 }
 #albums li a:hover {
@@ -79,10 +84,6 @@ a {
   padding: 30px 20px;
   width: 240px;
   border-radius: 25px 0 0 25px;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
 }
 #contact.is-hidden {
   right: -280px;
@@ -90,6 +91,9 @@ a {
 #contact h1 {
   margin-top: 0;
   font-size: 20px;
+}
+#display.is-hidden {
+  opacity: 0;
 }
 .disp-photo {
   position: absolute;
@@ -106,7 +110,8 @@ a {
   width: 34px;
   text-indent: -999em;
   overflow: hidden;
-  z-index: 4;
+  z-index: 6;
+  cursor: pointer;
 }
 .left {
   left: 0;
@@ -115,4 +120,19 @@ a {
 .right {
   right: 0;
   background: url(../img/right.png);
+}
+
+@media screen and (max-width: 520px) {
+  #sidebar {
+    width: 300px;
+  }
+  #title {
+    padding-top: 0;
+  }
+  #albums-tgl {
+    width: 250px;
+  }
+  #contact {
+    display: none;
+  }
 }
