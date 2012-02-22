@@ -66,6 +66,9 @@ a {
   text-align: right;
   margin: 10px 0;
 }
+#albums li.contact {
+  display: none;
+}
 #albums li a {
   display: block;
   padding: 10px 30px;
@@ -133,7 +136,7 @@ a {
   background: url(../img/right.png);
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 630px) {
   #sidebar {
     width: 300px;
   }
@@ -148,6 +151,9 @@ a {
   }
   #albums-tgl {
     width: 250px;
+  }
+  #albums li.contact {
+    display: block;
   }
   #contact {
     display: none;

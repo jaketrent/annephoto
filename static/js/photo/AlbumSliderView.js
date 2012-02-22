@@ -26,9 +26,9 @@ define(['Albums', 'AlbumView'], function (Albums, AlbumView) {
         });
         frag.appendChild(albumView.render(liTemplate).el);
       });
-      $(this.el).children('#albums').html(frag);
+      $(this.el).children('#albums').prepend(frag);
 
-      _($(this.el).children('#albums').children('li')).each(function (li, i) {
+      _($(this.el).children('#albums').children('li:not(.contact)')).each(function (li, i) {
         setTimeout(function () {
           $(li).fadeIn('slow');
         }, i * 300);
