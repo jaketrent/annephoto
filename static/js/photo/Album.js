@@ -31,8 +31,8 @@ define(function () {
       }
     },
     mkPhotoUrl: function (photo) {
-      var title = photo.title.$t;
       var path = photo.content.src;
+      var title = path.split('/').pop();
       return path.substr(0, path.indexOf(title)) + 's' + this.getPhotoSize(photo) + '/' + title;
     },
     getPhotoSize: function (photo) {
