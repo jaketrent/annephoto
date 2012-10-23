@@ -4,5 +4,8 @@
   "dependencies": {
     "express": "2.2.0",
     "request": "2.2.0"
+  },
+  "engines": {
+    "node": "0.8.x"
   }
 }
